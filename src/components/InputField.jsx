@@ -9,9 +9,9 @@ const InputField = ({
     name
 }) => {
     return (
-        <div className="input">
-            <label>{label}</label>
-            <input type={type} id={id} placeholder={placeholder} name={name} value = {value} onChange={(event) => onChange(event.target.value)} />
+        <div >
+            <label>{label}</label><br/>
+            <input className="enter" type={type} id={id} placeholder={placeholder} name={name} value = {value} onChange={(event) => onChange(event.target.value)} />
         </div>
     );
 };
