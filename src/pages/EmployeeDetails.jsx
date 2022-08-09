@@ -67,15 +67,21 @@ return(
         <Button label="Edit" handleClick={()=>goToNextPage()}/>
         </span>
         </section>
-        <div >
-            <DetailElement className="Details" label="Employee Name" value={state.name}/>
-            <DetailElement className="Details" label="Employee ID" value={state.id}/>
-            <DetailElement className="Details" label="Joining Date" value={state.name}/>
-            <DetailElement className="Details" label="Role" value={state.role}/>
-            <DetailElement className="Details" label="Status" value={state.status}/>
-            <DetailElement className="Details" label="Experience" value={state.experience}/>
-            <AddressDetailElement className="Details" label="Address" value1={state.line1 } value2={state.line2} value3={state.city} value4={state.state}value5={state.country} value6={state.pincode}/>
-
+    <div className="mainDetails">
+        <div className="Details" >
+            <DetailElement  label="Employee Name" value={state.name}/>
+            <DetailElement  label="Employee ID" value={state.id}/>
+            <DetailElement  label="Joining Date" value={state.date}/>
+            <DetailElement  label="Role" value={state.role}/>
+            <DetailElement  label="Status" value={state.status}/>
+            <DetailElement  label="Experience" value={state.experience}/>
+           
+        </div>
+        <hr/>
+        <div className="Details" >
+        <AddressDetailElement label="Address" value1={state.line1 } value2={state.line2} value3={state.city} value4={state.state}value5={state.country} value6={state.pincode}/>
+    
+        </div>
         </div>
     </main>
     </div>

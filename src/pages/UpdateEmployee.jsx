@@ -91,7 +91,7 @@ const UpdateEmployee=()=>{
                         {key:'Developer', label:'Developer'},
                         {key:'QA', label:'QA'},
                         {key:'DEVOPS', label:'Dev Ops'},
-                        {key:'admin', label:'Admin'},
+                        {key:'admin', label:'admin'},
                         {key:'hr', label:'hr'}
                     ]}
                     />  

@@ -10,7 +10,7 @@ function removeStorage(key){
 function clearAllStorage(){
     return localStorage.clear();
 }
-export default{
+export{
     // setCookie,
     // getCookie,
     // removeCookie,

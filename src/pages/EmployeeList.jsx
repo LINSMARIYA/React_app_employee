@@ -27,9 +27,9 @@ const EmployeeList=({})=>{
     <div>
     <Sidebar/>
     <main>
-    <section>
+    <section className='createEmp'>
     <Heading name="Employee List"/>
-    <Button label="Create Employee" handleClick={() => goToNextPage()} />
+    <Button className="emp" label="Create Employee" handleClick={() => goToNextPage()} />
     </section>
     
     <div className="table-div">
@@ -55,7 +55,7 @@ const EmployeeList=({})=>{
                   <td className="list-head">{user.id}</td>
                   <td className="list-head">{user.dateOfJoining}</td>
                   <td className="list-head">{user.role}</td>
-                  <td className="list-head">{user.status}</td>
+                  <td id={user.status} className="list-head">{user.status}</td>
                   <td className="list-head">{user.experience}</td>
                   <td className="list-head">
                   <a href={`/update/${user.id}`}><Button

@@ -40,7 +40,7 @@ const CreateEmployee=()=>{
         <div>
         <Sidebar/>
         <main>
-        <section>
+        <section >
         <Heading name="Create Employee"/>
         </section>
         <section> 
@@ -67,9 +67,9 @@ const CreateEmployee=()=>{
             <InputSelect
                     label="Status " elemName={state.value} id="status" onChange={(value) => onChangeValue("status", value)}
                     options ={[
-                        {key:'status', label:'' },
+                        {key:'status', label:'', className:"Active"},
                         {key:'Probation', label:'Probation'},
-                        {key:'Active', label:'Active'},
+                        {key:'Active', label:'Active' , statusId:"Active"},
                         {key:'Inactive', label:'Inactive'}
                     ]}
                     />  

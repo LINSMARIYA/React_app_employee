@@ -6,15 +6,16 @@ const InputSelect = ({
     name,
     id,
     options,
-    elemName,
+    statusId
+   
 }) => {
     return (
-        <div className="select" id={id} elemName={elemName} value={value} name={name} onChange={(event)  => onChange(event.target.value)}>
+        <div  id={id}  value={value} name={name} onChange={(event)  => onChange(event.target.value)}>
             <label>{label}</label><br/>
             <select name={label}>
                 {
                     options.map((item)=>(
-                      <option key={item.key} selected={item.key === value}>{item.label}</option>  
+                      <option  key={item.key} selected={item.key === value} id={statusId}>{item.label}</option>  
                     ))
                 }
             </select><br/>        
