@@ -1,4 +1,4 @@
-
+import "./InputSelect.css"
 const InputSelect = ({
     label,
     onChange,

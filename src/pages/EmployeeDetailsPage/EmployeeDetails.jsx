@@ -1,12 +1,12 @@
-import Sidebar from "../components/Sidebar";
-import Heading from "../components/Heading";
+import Sidebar from "../../components/Sidebar/Sidebar";
+import Heading from "../../components/Heading/Heading";
 import { useNavigate, useParams } from "react-router-dom";
-import Button from "../components/Button";
-import { useGetEmployeeByIdQuery } from "../services/baseApi";
-// import { useGetEmployeeByIdQuery } from "../EmployeeDetailsApi";
-import {DetailElement,AddressDetailElement} from "../components/DetailElement";
+import Button from "../../components/Button/Button";
+// import { useGetEmployeeByIdQuery } from "../../services/baseApi";
+import { useGetEmployeeByIdQuery } from "./EmployeeDetailsApi";
+import {DetailElement,AddressDetailElement} from "../../components/Details/Details";
 import {useState,useEffect} from "react";
-
+import "./EmployeeDetails.css"
 
 function EmployeeDetails(){
     let {id}=useParams();
@@ -62,20 +62,13 @@ return(
     <div>
     <Sidebar/>
     <main>
-        {/* <section>
-        <Heading name="Employee Details"/>
-        <span className="right">
-        <Button label="Edit" handleClick={()=>goToNextPage()}/>
-        </span>
-        </section> */}
-
 
         <section className='createEmp'>
         <Heading name="Employee Details"/>
 
         <div className='parent'>
-        <img className='image2' src={require("../images/circle.png")}/>
-        <img className='image3' src={require("../images/pen.png")}/>
+        <img className='image2' src={require("../../images/circle.png")}/>
+        <img className='image3' src={require("../../images/pen.png")}/>
         <div  className="emp">
         
         <Button label="Edit" handleClick={() => goToNextPage()}></Button></div>
@@ -88,7 +81,7 @@ return(
             <DetailElement  label="Employee ID" value={state.id}/>
             <DetailElement  label="Joining Date" value={state.date}/>
             <DetailElement  label="Role" value={state.role}/>
-            <DetailElement id={state.status} label="Status" value={state.status}/>
+            <DetailElement  id={state.status} label="Status" value={state.status}/>
             <DetailElement  label="Experience" value={state.experience}/>
            
         </div>

@@ -1,5 +1,5 @@
 import { upload } from "@testing-library/user-event/dist/upload";
-
+import "./Upload.css"
 const Upload = (props)=>{
     const {mainLabel, placeholder,btnLabel,onChange,value,}=props;
     return(

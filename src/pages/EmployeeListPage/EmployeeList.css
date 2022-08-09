@@ -1,0 +1,128 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Nuinito sans;
+}
+.createEmp {
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.parent{
+    position: relative;
+    bottom: 0px;
+    left: 0;
+  }
+  .image1 {
+    position: absolute;
+    bottom: 25px; ;
+    left: 10px;
+    width: 30px;  
+  }
+  .image2 {
+    top: 17px;
+    position: absolute;
+    width: 50px;
+  }
+
+  table{
+    width:100%;
+    border: none;
+    border-spacing: 0px 16px;
+    border-radius: 10px;
+    
+}
+.table-div{
+    padding: 10px;
+}
+th{
+    text-align: left;
+}
+td{
+    margin: 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+.del-icon{
+    color: red;
+    margin-right: 5px;
+}
+.edit-icon{
+    color: #10AAC0;
+}
+.emp Button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    margin: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    border-radius: 15px;
+    background-color:#EAF9FF;
+    font-size: 16px;
+    border: none;
+}
+#Active {
+    background: #d3f4be 0% 0% no-repeat padding-box;
+    display: flex;
+    opacity: 1;
+    width: 150px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  #Inactive {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffbfbf 0% 0% no-repeat padding-box;
+    opacity: 1;
+    width: 150px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+  }
+  #Probation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5ecb8 0% 0% no-repeat padding-box;
+    opacity: 1;
+    width: 150px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+  }
+
+  #element{
+    box-shadow: 0px 3px 6px #9D9D9D29;
+    background-color: #ffffff;
+    padding:10px;
+    font-weight: 100;
+}
+.list-element{
+
+    height: 60px;
+    border-radius: 5px;
+    background-color: #EAF9FF;
+    font: normal normal bold 16px/22px Nunito Sans;
+}
+
+.list-head{
+
+    padding: 10px;
+
+}
+main{
+  padding: 5px;
+  margin-left: 300px;
+  width: calc(100% - 300px);
+
+}

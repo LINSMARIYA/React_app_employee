@@ -1,12 +1,12 @@
-import InputField from "../components/InputField";
-import InputSelect from "../components/InputSelect";
-import Button from "../components/Button";
+import InputField from "../../components/InputField/InputField";
+import InputSelect from "../../components/InputSelect/InputSelect";
+import Button from "../../components/Button/Button";
 import { useState } from "react";
-import "../styles/style.css";
-import Upload from "../components/Upload";
-import Sidebar from "../components/Sidebar";
-import Heading from '../components/Heading'
-import { useCreateEmployeeMutation } from "../services/baseApi";
+import "./CreateEmployee.css";
+import Upload from "../../components/Upload/Upload";
+import Sidebar from "../../components/Sidebar/Sidebar";
+import Heading from '../../components/Heading/Heading'
+import { useCreateEmployeeMutation} from "./CreateEmployeeApi"
 import { useNavigate } from "react-router-dom";
 
 const CreateEmployee=()=>{

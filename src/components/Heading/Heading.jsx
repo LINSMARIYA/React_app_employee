@@ -1,3 +1,6 @@
+import "./Heading.css";
+
+
 const Heading=(props)=>{
     const {name}=props;
     return(

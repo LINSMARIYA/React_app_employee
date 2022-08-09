@@ -1,4 +1,4 @@
-
+import "./InputField.css"
 const InputField = ({
     label,
     onChange,

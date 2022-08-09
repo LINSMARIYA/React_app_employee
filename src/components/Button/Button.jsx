@@ -1,3 +1,5 @@
+import "./Button.css";
+
 const Button = (props)=>{
     const {label, handleClick,id,src}=props;
     return(

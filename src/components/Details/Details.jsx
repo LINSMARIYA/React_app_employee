@@ -1,10 +1,10 @@
-// import "../styles/style.css";
+import "./Details.css";
 const DetailElement=(props)=>{
-    const {label,value,id}=props;
+    const {label,value,id }=props;
     return(
         <div>
             <div className="label">{label}</div>
-            <div id={id}className="value">{value}</div>
+            <div  id={id} className="value" >{value}</div>
         </div>
     )
 }
@@ -13,7 +13,7 @@ const AddressDetailElement=(props)=>{
     return(
         <div>
             <div className="label">{label}</div>
-            <div className={className}>{value1}, {value2}, <br/>{value3}, {value4},<br/>{value5}, {value6}</div>
+            <div className={className}>{value1},<br/> {value2}, <br/>{value3}, {value4},<br/>{value5}, {value6}</div>
         </div>
     )
 }

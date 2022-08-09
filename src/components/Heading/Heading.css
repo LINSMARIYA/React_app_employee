@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Nuinito sans;
+}
+.create{
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    padding: 20px;
+    height: 100px;
+}

@@ -1,11 +1,12 @@
 import React from 'react';
+import "./EmployeeList.css"
 import { useNavigate, useParams } from "react-router-dom";
-import Button from "../components/Button";
-import Sidebar from '../components/Sidebar';
-import { useDeleteEmployeeByIdMutation, useGetEmployeeQuery } from '../services/baseApi';
-import Heading from '../components/Heading';
+import Button from "../../components/Button/Button";
+import Sidebar from '../../components/Sidebar/Sidebar';
+import { useDeleteEmployeeByIdMutation, useGetEmployeeQuery } from './EmployeeListApi';
+import Heading from '../../components/Heading/Heading';
 import {MdOutlineDelete,MdOutlineEdit} from "react-icons/md"
-import InputSelect from '../components/InputSelect';
+// import InputSelect from '../../components/InputSelect/InputSelect';
 
 
 const EmployeeList=({})=>{
@@ -34,8 +35,8 @@ const EmployeeList=({})=>{
     <div>Filter By</div>
 
     <div className='parent'>
-    <img className='image2' src={require("../images/circle.png")}/>
-    <img className='image1' src={require("../images/plus.png")}/>
+    <img className='image2' src={require("../../images/circle.png")}/>
+    <img className='image1' src={require("../../images/plus.png")}/>
     <div  className="emp">
 
     <Button label="Create Employee" handleClick={() => goToNextPage()}></Button></div>
@@ -87,21 +88,7 @@ const EmployeeList=({})=>{
                   <td id={user.status} className="list-head">{user.status} </td>
                   <td className="list-head">{user.experience} Years</td>
                   <td className="list-head">
-                  {/* <a href={`/update/${user.id}`}>
-                    <Button
-        className="button"
-        label="Edit"
-        id="btn_cancel"
-        handleClick={''}
-        /></a>
-                  <Button
-        className="button"
-        label="Delete"
-        id="btn_cancel"
-        handleClick={(e)=>{e.stopPropagation(); DeleteEmployeeById(user.id) }
           
-        }
-        /> */}
         <MdOutlineDelete className='del-icon' onClick={(e)=>{e.stopPropagation(); DeleteEmployeeById(user.id)}}/>
         <MdOutlineEdit className='edit-icon' onClick={(e)=>{e.stopPropagation();navigate(`/update/${user.id}`)}}/>
                   </td>
@@ -111,32 +98,7 @@ const EmployeeList=({})=>{
      
       
       </table>
-      </div>
-      
-  
-   
-    {/* <section className="list-element">
-
-          
-
-    </section> */}
-    {/* <ul>
-    {data && data.data.map(user => (
-              <div key={user.EmployeeID}>
-                {user.name}<br/> 
-                {user.id} <br/> 
-                {user.dateOfJoining}<br/> 
-                {user.role} <br/> 
-                {user.status}<br/> 
-                {user.experience}<br/> 
-                {user.addressId}<br/> 
-                {user.employeeId}<br/> 
-
-                  <br /> </div>
-          ))}
-      </ul> */}
-
-      
+      </div>      
         </main>
         </div>
     
