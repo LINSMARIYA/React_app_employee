@@ -7,10 +7,12 @@ import Upload from "../components/Upload";
 import Sidebar from "../components/Sidebar";
 import Heading from '../components/Heading'
 import {useGetEmployeeByIdQuery, useUpdateEmployeeByIdMutation } from "../services/baseApi";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 
 const UpdateEmployee=()=>{
+
+    const navigate=useNavigate();
     let {id}=useParams();
     const { data, error, isLoading } = useGetEmployeeByIdQuery(id)
     
@@ -59,6 +61,10 @@ const UpdateEmployee=()=>{
     //console.log(result)
     
     const [UpdateEmployeeById, result] = useUpdateEmployeeByIdMutation()
+
+    if(result.isSuccess){
+        navigate("/list");
+    }
     const onChangeValue = (key, value) =>{
         setState({
             ...state,
@@ -162,7 +168,7 @@ const UpdateEmployee=()=>{
         className="button"
         label="Cancel"
         id="btn_cancel"
-        handleClick={'/list'}
+        handleClick={()=>navigate("/list")}
         />
         </div>
         </div>

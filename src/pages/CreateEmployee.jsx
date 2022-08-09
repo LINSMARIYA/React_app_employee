@@ -7,8 +7,10 @@ import Upload from "../components/Upload";
 import Sidebar from "../components/Sidebar";
 import Heading from '../components/Heading'
 import { useCreateEmployeeMutation } from "../services/baseApi";
+import { useNavigate } from "react-router-dom";
 
 const CreateEmployee=()=>{
+    const navigate =useNavigate();
     const [state, setState] = useState({
         name: "",
         username:"",
@@ -29,6 +31,9 @@ const CreateEmployee=()=>{
 
     });
     const [CreateEmployee, result] = useCreateEmployeeMutation()
+    if(result.isSuccess){
+        navigate('/list');
+    }
     //console.log(result)
     const onChangeValue = (key, value) =>{
         setState({
@@ -129,7 +134,7 @@ const CreateEmployee=()=>{
         className="button"
         label="Cancel"
         id="btn_cancel"
-        handleClick={''}
+        handleClick={()=>navigate("/list")}
         />
         </div>
         </div>

@@ -3,6 +3,7 @@ import Heading from "../components/Heading";
 import { useNavigate, useParams } from "react-router-dom";
 import Button from "../components/Button";
 import { useGetEmployeeByIdQuery } from "../services/baseApi";
+// import { useGetEmployeeByIdQuery } from "../EmployeeDetailsApi";
 import {DetailElement,AddressDetailElement} from "../components/DetailElement";
 import {useState,useEffect} from "react";
 
@@ -61,26 +62,43 @@ return(
     <div>
     <Sidebar/>
     <main>
-        <section>
+        {/* <section>
         <Heading name="Employee Details"/>
         <span className="right">
         <Button label="Edit" handleClick={()=>goToNextPage()}/>
         </span>
-        </section>
+        </section> */}
+
+
+        <section className='createEmp'>
+        <Heading name="Employee Details"/>
+
+        <div className='parent'>
+        <img className='image2' src={require("../images/circle.png")}/>
+        <img className='image3' src={require("../images/pen.png")}/>
+        <div  className="emp">
+        
+        <Button label="Edit" handleClick={() => goToNextPage()}></Button></div>
+        </div>
+  
+    </section>
     <div className="mainDetails">
-        <div className="Details" >
+        <div className="Details-up" >
             <DetailElement  label="Employee Name" value={state.name}/>
             <DetailElement  label="Employee ID" value={state.id}/>
             <DetailElement  label="Joining Date" value={state.date}/>
             <DetailElement  label="Role" value={state.role}/>
-            <DetailElement  label="Status" value={state.status}/>
+            <DetailElement id={state.status} label="Status" value={state.status}/>
             <DetailElement  label="Experience" value={state.experience}/>
            
         </div>
         <hr/>
-        <div className="Details" >
-        <AddressDetailElement label="Address" value1={state.line1 } value2={state.line2} value3={state.city} value4={state.state}value5={state.country} value6={state.pincode}/>
-    
+        <div className="Details-down" >
+        <div className= "detai2">
+        <AddressDetailElement  label="Address" value1={state.line1 } value2={state.line2} value3={state.city} value4={state.state}value5={state.country} value6={state.pincode}/>
+        </div>
+        
+        <DetailElement  label="Employee ID proof" value={state.experience}/>
         </div>
         </div>
     </main>
